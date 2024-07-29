@@ -36,11 +36,11 @@
                                 {% bootstrap_button 'Выйти' button_class='btn-danger' %}
                             </form>
                             <hr class="dropdown-divider" />
-                            <a class="dropdown-item" href="#">Удалить</a>
+                            <a class="dropdown-item" href="{% url 'main:profile_delete' %}">Удалить</a>
                         </div>
                     </div>
                     {% else %}
-                    <a class="nav-link" href="#">Регистрация</a>
+                    <a class="nav-link" href="{% url 'main:register' %}">Регистрация</a>
                     <a class="nav-link" href="{% url 'main:login' %}">Вход</a>
                     {% endif %}
                 </div>

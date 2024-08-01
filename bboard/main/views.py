@@ -30,6 +30,8 @@ def other_page(request, page):
 
 
 class BBLoginView(LoginView):
+    """Класс-представление для входа пользователя."""
+
     template_name = "main/login.html"
 
 
@@ -43,6 +45,8 @@ def profile(request):
 
 
 class ProfileEditView(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
+    """Редактирование личных данных пользователя."""
+
     model = AdvUser
     template_name = "main/profile_edit.html"
     form_class = ProfileEditForm

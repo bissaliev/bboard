@@ -11,6 +11,7 @@ from .views import (
     index,
     other_page,
     profile,
+    rubric_bbs,
     user_activate,
 )
 
@@ -18,6 +19,7 @@ app_name = "main"
 
 urlpatterns = [
     path("", index, name="index"),
+    path("<int:pk>/", rubric_bbs, name="rubric_bbs"),
     path("<str:page>/", other_page, name="other"),
     path("accounts/login/", BBLoginView.as_view(), name="login"),
     path("accounts/logout/", BBLogoutView.as_view(), name="logout"),
